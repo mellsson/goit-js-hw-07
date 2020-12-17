@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ingredients">
+
+</ul>
+
+<script type="module">
+    const ingredients = [
+        'Картошка',
+        'Грибы',
+        'Чеснок',
+        'Помидоры',
+        'Зелень',
+        'Приправы',
+    ];
+
+const addItems= (items,ref) => items.forEach(item => {
+    const list =document.createElement('li');
+     list.textContent=item;
+document.querySelector(ref).appendChild(list);
+
+    });
+
+addItems(ingredients,'#ingredients');
+
+</script>
+</body>
+</html>

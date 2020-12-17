@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+#gallery {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.gallery {
+    margin-top: 30px;
+}
+.gallery img{
+    width: 800px;
+}
+    </style>
+</head>
+
+<body>
+
+<ul id="gallery">
+</ul>
+
+<script type="module">
+    const images = [
+        {
+            url:
+                'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            alt: 'White and Black Long Fur Cat',
+        },
+        {
+            url:
+                'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+        },
+        {
+            url:
+                'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            alt: 'Group of Horses Running',
+        },
+    ];
+
+    const addGallery =(images,id) => images.forEach(({url,alt}) => {
+       const list = document.querySelector(id);
+       list.insertAdjacentHTML('afterbegin',`<li class="gallery"><img src="${url}" alt="${alt}"></li>`);
+
+        }
+
+
+    )
+
+   addGallery(images,'#gallery')
+
+</script>
+
+</body>
+</html>
