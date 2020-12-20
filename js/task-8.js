@@ -3,9 +3,10 @@ const addBtnRef = document.querySelector('button[data-action="render"]');
 const clearBtnRef=document.querySelector('button[data-action="destroy"]');
 const boxesRef = document.querySelector('#boxes');
 
-addBtnRef.addEventListener('click',destroyBoxes);
+addBtnRef.addEventListener('click',greatBoxes);
 clearBtnRef.addEventListener('click',clearBoxes)
-function destroyBoxes() {
+
+function greatBoxes() {
     let amount = inputRef.value;
     const newBoxes = [];
     let sizeBoxes = 30;
