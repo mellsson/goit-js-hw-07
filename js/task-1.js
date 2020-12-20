@@ -1,7 +1,7 @@
 const itemsRef= [...document.querySelectorAll('li.item')];
 console.log(`В списке ${itemsRef.length} категории.`);
 
-itemsRef.map(item => {
+itemsRef.forEach(item => {
     const titleRef=item.querySelector('h2');
     const listRef=item.querySelectorAll('ul li')
     const title=titleRef.textContent;
