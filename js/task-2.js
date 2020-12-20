@@ -7,11 +7,9 @@ const ingredients = [
     'Приправы',
 ];
 
-const addItems= (items,ref) => items.forEach(item => {
+ingredients.forEach(ingredient => {
     const list =document.createElement('li');
-    list.textContent=item;
-    document.querySelector(ref).appendChild(list);
+    list.textContent=ingredient;
+    document.querySelector('#ingredients').appendChild(list);
 
 });
-
-addItems(ingredients,'#ingredients');

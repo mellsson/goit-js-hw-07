@@ -16,13 +16,7 @@ const images = [
     },
 ];
 
-const addGallery =(images,id) => images.forEach(({url,alt}) => {
-        const list = document.querySelector(id);
+images.forEach(({url,alt}) => {
+        const list = document.querySelector('#gallery');
         list.insertAdjacentHTML('afterbegin',`<li class="gallery"><img src="${url}" alt="${alt}"></li>`);
-
-    }
-
-
-)
-
-addGallery(images,'#gallery')
+})
