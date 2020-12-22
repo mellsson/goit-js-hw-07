@@ -21,11 +21,11 @@ images.forEach(({url,alt}) => {
   return list +=`<li class="gallery"><img src="${url}" alt="${alt}"></li>`;
 
 });
+galleryRef.insertAdjacentHTML('afterbegin',list);
 
 
 //// Какой вариант лучше?)))
 
-// galleryRef.insertAdjacentHTML('afterbegin',list);
 //
 // const galleryRef = document.querySelector('#gallery');
 // const greatImages=images.map(({url,alt}) => {
